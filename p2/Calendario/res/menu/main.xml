@@ -1,0 +1,10 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+	<item android:id="@+id/menu_login"
+	android:title="@string/menu_login" />
+	
+	<item android:id="@+id/menu_view_by_subject"
+	android:title="@string/menu_view_by_subject" />
+	
+	<item android:id="@+id/menu_logout"
+	android:title="@string/menu_logout" />
+</menu>

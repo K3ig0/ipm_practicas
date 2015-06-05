@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendario de eventos</title>
+    <link rel="stylesheet" type="text/css" href="style/main.css">
+    <script type="text/javascript" src="js/main.js"></script>
+</head>
+<body>
+    <div id="wrapper">
+        <header>
+            <h1>Calendario</h1>
+        </header>
+        <menu>
+            <div class="loading"><img class="loading" src="images/loading.gif" alt="Cargando" role="progressbar 
+"/></div>
+            <ul>
+                <li><input id="busqueda" type="text" placeholder="Buscar" size="15" role="search" tabindex="0"/> <br /></li>
+                <li><a id="login" href="#" aria-has-popup="true" tabindex="0">Login</a></li>
+                <li><select id="view_by_subject" class="hidden" aria-hidden="true" role="listbox" tabindex="0"></select></li>
+                <li><a id="logout" class="hidden" href="#" aria-hidden="true" tabindex="0">Cerrar sesión</a></li>
+            </ul>
+            <ul id="event-description">
+                
+            </ul>
+        </menu>
+        
+        <section id="calendar" role="main" aria-live="assertive" aria-atomic="true" aria-relevant="text">
+            <nav>
+                <ul>
+                    <li id="atras" class="nav-button" role="button" tabindex="0" role="navigation" aria-label="Mes anterior">&lt;</li>
+                    <li><h3 id="month"></h3></li>
+                    <li id="adelante" class="nav-button" role="button" tabindex="0" role="navigation" aria-label="Mes siguiente">&gt;</li>
+                </ul>
+            </nav>
+            <ul id="calendar-header">
+                <li><span class="full">Lunes</span><span class="short">L</span></li>
+                <li><span class="full">Martes</span><span class="short">M</span></li>
+                <li><span class="full">Miércoles</span><span class="short">X</span></li>
+                <li><span class="full">Jueves</span><span class="short">J</span></li>
+                <li><span class="full">Viernes</span><span class="short">V</span></li>
+                <li><span class="full">Sábado</span><span class="short">S</span></li>
+                <li><span class="full">Domingo</span><span class="short">D</span></li>
+            </ul>
+            <ul id="calendar-body">
+                <li id="space1" class="space hidden" aria-hidden="true"></li>
+                <li id="space2" class="space hidden" aria-hidden="true"></li>
+                <li id="space3" class="space hidden" aria-hidden="true"></li>
+                <li id="space4" class="space hidden" aria-hidden="true"></li>
+                <li id="space5" class="space hidden" aria-hidden="true"></li>
+                <li id="space6" class="space hidden" aria-hidden="true"></li>
+                <li id="day01" class="day" tabindex="0"><span class="day-n">1</span><div class="day-content full"></div></li>
+                <li id="day02" class="day" tabindex="0"><span class="day-n">2</span><div class="day-content full"></div></li>
+                <li id="day03" class="day" tabindex="0"><span class="day-n">3</span><div class="day-content full"></div></li>
+                <li id="day04" class="day" tabindex="0"><span class="day-n">4</span><div class="day-content full"></div></li>
+                <li id="day05" class="day" tabindex="0"><span class="day-n">5</span><div class="day-content full"></div></li>
+                <li id="day06" class="day" tabindex="0"><span class="day-n">6</span><div class="day-content full"></div></li>
+                <li id="day07" class="day" tabindex="0"><span class="day-n">7</span><div class="day-content full"></div></li>
+                <li id="day08" class="day" tabindex="0"><span class="day-n">8</span><div class="day-content full"></div></li>
+                <li id="day09" class="day" tabindex="0"><span class="day-n">9</span><div class="day-content full"></div></li>
+                <li id="day10" class="day" tabindex="0"><span class="day-n">10</span><div class="day-content full"></div></li>
+                <li id="day11" class="day" tabindex="0"><span class="day-n">11</span><div class="day-content full"></div></li>
+                <li id="day12" class="day" tabindex="0"><span class="day-n">12</span><div class="day-content full"></div></li>
+                <li id="day13" class="day" tabindex="0"><span class="day-n">13</span><div class="day-content full"></div></li>
+                <li id="day14" class="day" tabindex="0"><span class="day-n">14</span><div class="day-content full"></div></li>
+                <li id="day15" class="day" tabindex="0"><span class="day-n">15</span><div class="day-content full"></div></li>
+                <li id="day16" class="day" tabindex="0"><span class="day-n">16</span><div class="day-content full"></div></li>
+                <li id="day17" class="day" tabindex="0"><span class="day-n">17</span><div class="day-content full"></div></li>
+                <li id="day18" class="day" tabindex="0"><span class="day-n">18</span><div class="day-content full"></div></li>
+                <li id="day19" class="day" tabindex="0"><span class="day-n">19</span><div class="day-content full"></div></li>
+                <li id="day20" class="day" tabindex="0"><span class="day-n">20</span><div class="day-content full"></div></li>
+                <li id="day21" class="day" tabindex="0"><span class="day-n">21</span><div class="day-content full"></div></li>
+                <li id="day22" class="day" tabindex="0"><span class="day-n">22</span><div class="day-content full"></div></li>
+                <li id="day23" class="day" tabindex="0"><span class="day-n">23</span><div class="day-content full"></div></li>
+                <li id="day24" class="day" tabindex="0"><span class="day-n">24</span><div class="day-content full"></div></li>
+                <li id="day25" class="day" tabindex="0"><span class="day-n">25</span><div class="day-content full"></div></li>
+                <li id="day26" class="day" tabindex="0"><span class="day-n">26</span><div class="day-content full"></div></li>
+                <li id="day27" class="day" tabindex="0"><span class="day-n">27</span><div class="day-content full"></div></li>
+                <li id="day28" class="day" tabindex="0"><span class="day-n">28</span><div class="day-content full"></div></li>
+                <li id="day29" class="day" tabindex="0"><span class="day-n">29</span><div class="day-content full"></div></li>
+                <li id="day30" class="day" tabindex="0"><span class="day-n">30</span><div class="day-content full"></div></li>
+                <li id="day31" class="day" tabindex="0"><span class="day-n">31</span><div class="day-content full"></div></li>
+            </ul>
+            <div class="clearfix"></div>
+        </section>
+        <footer role="contentinfo">
+            Interfaces Persona Máquina - Curso 2013/2014
+            <br />
+            Manuel Sánchez Naveira y Oscar Blanco Novoa
+        </footer>
+    </div>
+    <div id="centerpoint">
+        <section id="dialog" class="calendar-form hidden" aria-hidden="true" role="dialog">
+            <form name="login" action="cgi-bin/user.py" method="POST">
+                <table>
+                    <tr>
+                        <td><label id="lblUsuario" for="usuario">Usuario:</label></td>
+                        <td><input name="usuario" id="usuario" aria-labelledby="lblUsuario" size="15"  tabindex="0"></td>
+                    </tr>
+                    <tr>
+                        <td><input id="submit" type="submit" value="Enviar" role="button" tabindex="0"/></td>
+                        <td><button id="cancel" type="button" role="button" tabindex="0">Cancelar</button> </td>
+                    </tr>
+                </table>
+            </form>
+            <div id="escape"><a href="#"></a></div>
+        </section>
+    </div>
+
+
+</body>
+</html>
